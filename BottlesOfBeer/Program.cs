@@ -6,10 +6,44 @@ namespace BottlesOfBeer
     {
         public static void Main()
         {
-            // TODO: Output "99 bottles of beer on the wall.  99 bottles of beer.  Take 1 down and pass it around, 98 bottles of beer on the wall.";
-            // Count down until there are no more bottles of beer on the wall.
+            
+            int counter = 99;
 
-            Console.ReadLine();
+            while (counter > 2)
+
+            {
+                Console.WriteLine($"{counter} bottles of beer on the wall.  {counter} bottles of beer. " +
+                    "Take 1 down and pass it around, " +
+                    $"{counter - 1} bottles of beer on the wall."); counter--;
+            }
+
+            if (counter == 2)
+            {
+                Console.WriteLine($"{counter} bottles of beer on the wall.  {counter} bottles of beer. " +
+                    "Take 1 down and pass it around, " +
+                    $"{counter - 1} bottle of beer on the wall."); counter--;
+            }
+
+           
+
+            if (counter == 1)
+            {
+
+                Console.WriteLine($"{counter} bottle of beer on the wall.  {counter} bottle of beer. " +
+                        "Take 1 down and pass it around, " +
+                        "No more bottles of beer on the wall.");
+            }
+
+                 Console.ReadLine();
         }
     }
 }
+ /*   Couldn't get this code to run
+            if (counter == 2)
+            {
+                string lastBeer = $"{counter - 1} last bottle of beer on the wall.";
+                Console.WriteLine($"{counter} bottles of beer on the wall.  {counter} bottles of beer. " +
+                    "Take 1 down and pass it around, ");
+                Console.WriteLine(lastBeer);
+            }
+            */
